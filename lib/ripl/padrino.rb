@@ -1,4 +1,6 @@
 require 'ripl'
+require File.expand_path('../commands',__FILE__)
+
 module Ripl
   module Padrino
     VERSION = '0.0.1'
@@ -29,4 +31,5 @@ module Ripl
   end
 end
 
-Ripl::Shell.send :include, Ripl::Padrino if defined? Ripl::Padrino
+Ripl::Shell.include Ripl::Padrino if defined? Ripl::Padrino
+Ripl::Commands.include Ripl::Padrino::Commands if defined? Ripl::Padrino::Commands

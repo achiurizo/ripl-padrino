@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require 'ripl'
+require 'ripl/padrino'
+Ripl.start
